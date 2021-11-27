@@ -1,0 +1,102 @@
+.collapse
+{
+  border-collapse: collapse;
+  text-align: center;
+  display: inline-table;
+  margin: 1em;
+  border: solid 4px;
+  border-color: blue;
+  background-color: rgb(163, 207, 75);
+  table-layout: auto;
+  width:98%;
+  overflow: visible;
+  margin-bottom: 150px;
+}
+
+table th, table td
+{
+  border: solid 3px;
+  border-color: blueviolet
+}
+
+.nom_classe
+{
+  font-size: larger;
+  font-weight: 1000;
+}
+
+.Accueil_background
+{
+  background-image:url(images/taverne.jfif);
+}
+
+.Accueil_footer
+{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right:0;
+  background-color: rgb(255, 211, 122);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.Accueil_main
+{
+  position: relative; 
+  background-color: brown;
+}
+
+.page_footer
+{
+  background-color: rgb(255, 211, 122);
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right:0;
+  height: 100px;
+  text-align: center;
+}
+
+input
+{
+    width:15%;
+
+}
+
+input:invalid
+{
+  border: 2px solid red;
+}
+  
+input:valid {
+  border: none;
+}
+
+header
+{
+  text-align:center;
+}
+
+.logo_efrei
+{
+  position: absolute;
+  left:110px;
+  width:150px;
+  bottom:30px;
+}
+
+.logo_footer
+{
+  position:absolute;
+  left:0;
+}
+
+form
+{
+  background-color: darkgreen;
+  margin:30px;
+  padding: 10px;
+  text-align:center;
+}

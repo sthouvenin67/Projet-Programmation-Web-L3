@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Partie MJ</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="shortcut icon" href="/images/logoMJ.ico" type="image/x-icon">
+
+        <style>
+            body{background-color:rgb(252, 253, 185)}
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Gestion MJ</h1>
+        </header>
+
+        <h2>Création des personnages</h2>
+        <form>
+            <div>
+                <input type="text" id="name" name="user_name" placeholder="Nom" required>
+            </div>
+            <br>
+            <div>
+                <label>
+                    <span>Classe :</span>
+                </label>
+                <select id="class" name="user_class">
+                    <option selected value="paladin">Paladin</option>
+                    <option value="pretre">Prêtre</option>
+                    <option value="hsorcier">Sorcier humain</option>
+                    <option value="chasseur">Chasseur</option>
+                    <option value="brute">Brute</option>
+                    <option value="mineur">Mineur</option>
+                    <option value="artisan">Artisan</option>
+                    <option value="golem">Façonneur de Golem</option>
+                    <option value="savant">Savant</option>
+                    <option value="archer">Archer</option>
+                    <option value="elfeMage">Mage elfe</option>
+                    <option value="artiste">Artiste</option>
+                    <option value="blanc">Mage Blanc</option>
+                    <option value="chanteur">Chanteur</option>
+                    <option value="guerrier">Guerrier</option>
+                    <option value="vampire">Vampire</option>
+                    <option value="dsorcier">Sorcier démoniste</option>
+                    <option value="dmageGuerrier">Mage Guerrier démoniste</option>
+                    <option value="dresseur">Dresseur</option>
+                    <option value="emageGuerrier">Mage Guerrier élémentaire</option>
+                    <option value="elementaireMage">Mage élémentaire</option>
+                    <option value="explorateur">Explorateur</option>
+                    <option value="moine">Moine</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input type="number" id="force" name="user_force" placeholder="Force" min="0" max="16" required>
+                <input type="number" id="dexterite" name="user_dexterite" placeholder="Dextérité" min="0" max="16" required>
+                <input type="number" id="constitution" name="user_constitution" placeholder="Constitution" min="0" max="16" required>
+                <input type="number" id="intelligence" name="user_intelligence" placeholder="Intelligence" min="0" max="16" required>
+                <input type="number" id="sagesse" name="user_sagesse" placeholder="Sagesse" min="0" max="16" required>
+                <input type="number" id="charisme" name="user_charisme" placeholder="Charisme" min="0" max="16" required>
+            </div>
+            <br>
+            <div>
+                <button type="submit">Ajouter</button>
+                <button type="reset">Annuler</button>
+            </div>
+        </form>
+
+        <h2>Tableau des Personnages</h2>
+        <table class="collapse">
+            <tr>
+                <th>Nom</th>
+                <th>Classe</th>
+                <th>Statistiques</th>
+                <th>Équipement</th>
+            </tr>
+        </table>
+
+        <h2>Cartes</h2>
+        <form>
+            <select id="carte" name="carte">
+                <option selected value="carte1">Carte 1</option>
+                <option value="carte2">Carte 2</option>
+            </select>
+        </form>
+        <br>
+        <p class="page_footer">
+            <img class="logo_footer" src="images/LogoGeneral.png" width=100>
+            <a href="Accueil.html">Retour à l'Accueil</a> <br>
+            <a href="Creation.html">Outils de création de personnage</a> <br>
+        </p>
+    </body>
+</html>
