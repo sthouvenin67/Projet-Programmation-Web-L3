@@ -1,232 +1,459 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
+
     <head>
-        <title>Outils de création de personnages</title>
+        <meta charset="utf-8"/>
+        <title>Outils de cr&#xE9;ation de personnages</title>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="/images/logoCreation.ico" type="image/x-icon">
 
         <style>
-            body{background-color:rgb(252, 253, 185)}
+            body{background-image:url(images/Fond_Persos.jfif);
+            margin-bottom:150px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
         </style>
     </head>
-
-    
-
 
     <body>
         <header>
             <h1>Classes de Personnages</h1>
         </header>
-        <ul>
-            <li>Choisissez une classe</li>
-            <li>Lancez 5 dés à 6 faces</li>
-            <li>Répartissez les résultats obtenus en points de statistique (vous pouvez avoir maximum 16 points dans chaque statistique)</li>
-        </ul>
-        <table class="collapse">
+
+        <table class="creation">
             <tr>
                 <th>Race</th>
-                <th>Métiers</th>
+                <th>M&#xE9;tiers</th>
                 <th>Statistiques</th>
-                <th>Compétences de base</th>
+                <th>Comp&#xE9;tences de base</th>
             </tr>
             <tr>
                 <td rowspan="5">Humain</td>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP1Characters/Cleric_Blue_48.png" /><br>
+                    <img src="images/Seb_Mj/TP1Characters/Cleric_Blue_48.png" class="img_perso" alt/><br>
                     Paladin
                 </td>
-                <td>Force : 10<br>Dextérité : 4<br>Constitution : 12<br>Intelligence : 4<br>Sagesse : 4<br>Charisme : 6</td>
-                <td>Comp</td>
+                <td>Force : 10<br>Dext&#xE9;rit&#xE9; : 4<br>Constitution : 12<br>Intelligence : 4<br>Sagesse : 4<br>Charisme : 6</td>
+                <td>
+                    <ul>
+                        <li>Coup de Bouclier : Le personnage encaisse les dommages pendant une action adverse et augmente les d&#xE9;g&acirc;ts de la prochaine attaque des dommages encaiss&#xE9;s multipli&#xE9;s par la statistique de Constitution divis&#xE9; par 100.</li>
+                        <li>Protection : Le personnage subit les dommages qu'un autre personnage aurait d&#xFB; subir.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP1Characters/Magicuser_37.png" /> <br>
-                    Prêtre
+                    <img src="images/Seb_Mj/TP1Characters/Magicuser_37.png" class="img_perso" alt/> <br>
+                    Pr&#xEA;tre
                 </td>
                 
-                <td>Force : 4<br>Dextérité : 6<br>Constitution : 4<br>Intelligence : 10<br>Sagesse : 12<br>Charisme : 4</td>
-                <td>Comp</td>
+                <td>Force : 4<br>Dext&#xE9;rit&#xE9; : 6<br>Constitution : 4<br>Intelligence : 10<br>Sagesse : 12<br>Charisme : 4</td>
+                <td>
+                    <ul>
+                        <li>Premiers secours : Le personnage soigne 10% de la vie d'un personnage.</li>
+                        <li>Enchantement : Le personnage enchante la cible pour augmenter de ses statistiques de 1.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP1Characters/Magicuser_44.png" /> <br>
+                    <img src="images/Seb_Mj/TP1Characters/Magicuser_44.png" class="img_perso" alt/> <br>
                     Sorcier
                 </td>
-                <td>Force : 4<br>Dextérité : 3<br>Constitution : 4<br>Intelligence : 12<br>Sagesse : 11<br>Charisme : 6</td>
-                <td>Comp</td>
+                <td>Force : 4<br>Dext&#xE9;rit&#xE9; : 3<br>Constitution : 4<br>Intelligence : 12<br>Sagesse : 11<br>Charisme : 6</td>
+                <td>
+                    <ul>
+                        <li>Manipulation de gravit&#xE9; : Le personnage utilise sa magie pour envoyer un ennemi au loin.</li>
+                        <li>Mal&#xE9;diction : Le personnage maudit la cible et lui enl&#xE8;ve 5% de vie &#xE0; chaque fois que la cible agit pour les 5 prochaines actions.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Human_Rogue_Crossbow.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Human_Rogue_Crossbow.png" class="img_perso" alt/> <br>
                     Chasseur
                 </td>
-                <td>Force : 8<br>Dextérité : 8<br>Constitution : 6<br>Intelligence : 5<br>Sagesse : 5<br>Charisme : 8</td>
-                <td>Comp</td>
+                <td>Force : 8<br>Dext&#xE9;rit&#xE9; : 8<br>Constitution : 6<br>Intelligence : 5<br>Sagesse : 5<br>Charisme : 8</td>
+                <td>
+                    <ul>
+                        <li>Chasse : Le personnage chasse et vend ses proies. L'argent gagn&#xE9; est &#xE9;gal &#xE0; la moyenne de la Force et la Dexterit&#xE9; du personnage.</li>
+                        <li>Discr&#xE9;tion : Le personnage s'approche d'un ennemi sans se faire rep&#xE9;rer et peut agir une deuxi&#xE8;me fois apr&#xE8;s cette action.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Human_Barbarian_Claws.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Human_Barbarian_Claws.png" class="img_perso" alt/> <br>
                     Brute
                 </td>
-                <td>Force : 16<br>Dextérité : 5<br>Constitution : 4<br>Intelligence : 5<br>Sagesse : 5<br>Charisme : 5</td>
-                <td>Comp</td>
+                <td>Force : 16<br>Dext&#xE9;rit&#xE9; : 5<br>Constitution : 4<br>Intelligence : 5<br>Sagesse : 5<br>Charisme : 5</td>
+                <td>
+                    <ul>
+                        <li>Testament : Le personnage augmente sa force de 3 pour la prochaine action.</li>
+                        <li>Altercation : La Dext&#xE9;rit&#xE9; du personnage est augment&#xE9;e de 2 lorsqu'il combat au corps &#xE0; corps.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td rowspan="4">Nain</td>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP15Dwarves/dwarf_male_pick_shield.png" /> <br>
+                    <img src="images/Seb_Mj/TP15Dwarves/dwarf_male_pick_shield.png" class="img_perso" alt/> <br>
                     Mineur
                 </td>
-                <td>Force : 9<br>Dextérité : 2<br>Constitution : 10<br>Intelligence : 8<br>Sagesse : 7<br>Charisme : 4</td>
-                <td>Comp</td>
+                <td>Force : 9<br>Dext&#xE9;rit&#xE9; : 2<br>Constitution : 10<br>Intelligence : 8<br>Sagesse : 7<br>Charisme : 4</td>
+                <td>
+                    <ul>
+                        <li>Extraction : Le personnage r&#xE9;cup&#xE8;re une pierre et la lance sur l'ennemi (les dommages inflig&#xE9;s d&#xE9;pendent de la pierre).</li>
+                        <li>Perforation : Le personnage creuse un tunnel entre deux lieux, ce qui permet de se d&#xE9;placer rapidement de l'un &#xE0; l'autre.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP15Dwarves/dwarf_male_wizard_staff.png" /> <br>
+                    <img src="images/Seb_Mj/TP15Dwarves/dwarf_male_wizard_staff.png" class="img_perso" alt/> <br>
                     Artisan
                 </td>
-                <td>Force : 9<br>Dextérité : 2<br>Constitution : 10<br>Intelligence : 7<br>Sagesse : 8<br>Charisme : 4</td>
-                <td>Comp</td>
-            </tr>
-            <tr>
-                <td class="nom_classe">
-                    <img src="images/Seb Mj/TP15Dwarves/dwarf_male_red_priest.png" /> <br>
-                    Façonneur de Golem
+                <td>Force : 9<br>Dext&#xE9;rit&#xE9; : 2<br>Constitution : 10<br>Intelligence : 7<br>Sagesse : 8<br>Charisme : 4</td>
+                <td>
+                    <ul>
+                        <li>Frabrication : Le personnage fabrique un &#xE9;quipement.</li>
+                        <li>Coup br&#xFB;lant : Le pesonnage porte un coup avec un objet chauff&#xE9; &#xE0; blanc, infligeant 3 points de dommages en plus.</li>
+                    </ul>
                 </td>
-                <td>Force : 12<br>Dextérité : 2<br>Constitution : 12<br>Intelligence : 5<br>Sagesse : 5<br>Charisme : 4</td>
-                <td>Comp</td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Dwarf_Monk_Fist.png" /> <br>
+                    <img src="images/Seb_Mj/TP15Dwarves/dwarf_male_red_priest.png" class="img_perso" alt/> <br>
+                    Fa&#xE7;onneur de Golem
+                </td>
+                <td>Force : 12<br>Dext&#xE9;rit&#xE9; : 2<br>Constitution : 12<br>Intelligence : 5<br>Sagesse : 5<br>Charisme : 4</td>
+                <td>
+                    <ul>
+                        <li>Cr&#xE9;ation : Le personnage g&#xE9;n&#xE8;re un golem dont les statistiques sont &#xE9;gales &#xE0; la moiti&#xE9; des statistiques du cr&#xE9;ateur.</li>
+                        <li>Am&#xE9;lioration : Le personnage am&#xE9;liore le golem, en augmentant de 1 point une des statistiques de ce dernier.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="nom_classe">
+                    <img src="images/Seb_Mj/TP16Characters2/Dwarf_Monk_Fist.png" class="img_perso" alt/> <br>
                     Savant
                 </td>
-                <td>Force : 5<br>Dextérité : 2<br>Constitution : 3<br>Intelligence : 12<br>Sagesse : 15<br>Charisme : 3</td>
-                <td>Comp</td>
+                <td>Force : 5<br>Dext&#xE9;rit&#xE9; : 2<br>Constitution : 3<br>Intelligence : 12<br>Sagesse : 15<br>Charisme : 3</td>
+                <td>
+                    <ul>
+                        <li>Pr&#xE9;paration : Le personnage pr&#xE9;pare une potion.</li>
+                        <li>Breuvage : Le personnage fait boire une potion &#xE0; la cible, dont l'effet d&#xE9;pend du hasard.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td rowspan="5">Elfe</td>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Elf_Rogue_Bow.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Elf_Rogue_Bow.png" class="img_perso" alt/> <br>
                     Archer
                 </td>
-                <td>Force : 6<br>Dextérité : 10<br>Constitution : 6<br>Intelligence : 5<br>Sagesse : 5<br>Charisme : 8</td>
-                <td>Comp</td>
+                <td>Force : 6<br>Dext&#xE9;rit&#xE9; : 10<br>Constitution : 6<br>Intelligence : 5<br>Sagesse : 5<br>Charisme : 8</td>
+                <td>
+                    <ul>
+                        <li>Pluie de fl&#xE8;ches : Le personnage tire une pluie de fl&#xE8;ches touchant tous les ennemis.</li>
+                        <li>Contre fl&#xE8;che : Le personnage tire une fl&#xE8;che pour l'emp&#xEA;cher d'attaquer un alli&#xE9;.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Half-elf_Wizard_Staff.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Half-elf_Wizard_Staff.png" class="img_perso" alt/> <br>
                     Mage
                 </td>
-                <td>Force : 4<br>Dextérité : 10<br>Constitution : 5<br>Intelligence : 10<br>Sagesse : 5<br>Charisme : 6</td>
-                <td>Comp</td>
+                <td>Force : 4<br>Dext&#xE9;rit&#xE9; : 10<br>Constitution : 5<br>Intelligence : 10<br>Sagesse : 5<br>Charisme : 6</td>
+                <td>
+                    <ul>
+                        <li>Boule de feu : Le mage incante un sort de feu qui explose au contact, plus le temps de charge est long et plus &#xE9;lev&#xE9;s seront les d&#xE9;gats.</li>
+                        <li>Cha&#xEE;ne d'&#xE9;clairs : Le mage incante un sort de foudre qui saute d'un ennemi &#xE0; l'autre, plus le temps de charge est long et plus &#xE9;lev&#xE9;s seront les d&#xE9;gats.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP1Characters/Thief_Daggers_21.png" /> <br>
+                    <img src="images/Seb_Mj/TP1Characters/Thief_Daggers_21.png" class="img_perso" alt/> <br>
                     Artiste
                 </td>
-                <td>Force : 5<br>Dextérité : 12<br>Constitution : 4<br>Intelligence : 5<br>Sagesse : 6<br>Charisme : 10</td>
-                <td>Comp</td>
+                <td>Force : 5<br>Dext&#xE9;rit&#xE9; : 12<br>Constitution : 4<br>Intelligence : 5<br>Sagesse : 6<br>Charisme : 10</td>
+                <td>
+                    <ul>
+                        <li>Roulade : Le personnage roule pour esquiver une attaque.</li>
+                        <li>Lancer : Le personnage lance un objet (au choix) de son inventaire.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP1Characters/Magicuser_Green_08.png" /> <br>
+                    <img src="images/Seb_Mj/TP1Characters/Magicuser_Green_08.png" class="img_perso" alt/> <br>
                     Mage Blanc
                 </td>
-                <td>Force : 4<br>Dextérité : 10<br>Constitution : 5<br>Intelligence : 10<br>Sagesse : 5<br>Charisme : 6</td>
-                <td>Comp</td>
+                <td>Force : 4<br>Dext&#xE9;rit&#xE9; : 10<br>Constitution : 5<br>Intelligence : 10<br>Sagesse : 5<br>Charisme : 6</td>
+                <td>
+                    <ul>
+                        <li>Bouclier : G&#xE9;n&#xE8;re un bouclier autour d'une cible qui ne laisse passer que l'air tant que sa durabilit&#xE9; n'est pas nulle. Inefficace contre les attaques de gaz.</li>
+                        <li>Vie r&#xE9;g&#xE9;n&#xE9;r&#xE9;e : Le Mage blanc puise dans l'&#xE9;nergie vitale des &#xEA;tres vivants qui l'entourent pour soigner une cible.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP1Characters/Villager_Female_04.png" /> <br>
+                    <img src="images/Seb_Mj/TP1Characters/Villager_Female_04.png" class="img_perso" alt/> <br>
                     Chanteur
                 </td>
-                <td>Force : 5<br>Dextérité : 10<br>Constitution : 4<br>Intelligence : 5<br>Sagesse : 6<br>Charisme : 10</td>
-                <td>Comp</td>
+                <td>Force : 5<br>Dext&#xE9;rit&#xE9; : 10<br>Constitution : 4<br>Intelligence : 5<br>Sagesse : 6<br>Charisme : 10</td>
+                <td>
+                    <ul>
+                        <li>Chant : Le personnage chante pour encourager la cible et lui donner une action suppl&#xE9;mentaire.</li>
+                        <li>Onde de chant : Le personnage produit un tr&#xE8;s fort bruit infligeant des dommages &#xE0; tous les alli&#xE9;s et ennemis proches.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
-                <td rowspan="5">Démoniste</td>
+                <td rowspan="5">D&#xE9;moniste</td>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Human_Warrior_Sword_Masked.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Human_Warrior_Sword_Masked.png" class="img_perso" alt/> <br>
                     Guerrier
                 </td>
-                <td>Force : 9<br>Dextérité : 3<br>Constitution : 10<br>Intelligence : 4<br>Sagesse : 4<br>Charisme : 6</td>
-                <td>Comp</td>
+                <td>Force : 9<br>Dext&#xE9;rit&#xE9; : 3<br>Constitution : 10<br>Intelligence : 4<br>Sagesse : 4<br>Charisme : 6</td>
+                <td>
+                    <ul>
+                        <li>Invocation : Invoque une cr&#xE9;ature d&#xE9;moniaque. Plus le niveau de la cr&#xE9;ature est &#xE9;lev&#xE9;e plus la part de d&#xE9;mon se r&#xE9;veille.</li>
+                        <li>Mal&#xE9;diction d'arme : Infuse une arme d'&#xE9;nergie. Plus le taux d'&#xE9;nergie insufl&#xE9; est &#xE9;lev&#xE9;, plus la part de d&#xE9;mon se r&#xE9;veille.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Human_Warrior_Spear_Masked.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Human_Warrior_Spear_Masked.png" class="img_perso" alt/> <br>
                     Vampire
                 </td>
-                <td>Force : 8<br>Dextérité : 2<br>Constitution : 10<br>Intelligence : 4<br>Sagesse : 10<br>Charisme : 6</td>
-                <td>Comp</td>
+                <td>Force : 8<br>Dext&#xE9;rit&#xE9; : 2<br>Constitution : 10<br>Intelligence : 4<br>Sagesse : 10<br>Charisme : 6</td>
+                <td>
+                    <ul>
+                        <li>Lame de sang : Le vampire contr&#xF4;le son sang, formant des lames autour lui qui peuvent attaquer ind&#xE9;pendamment. Plus le nombre de lames est &#xE9;lev&#xE9;, plus le co&#xFB;t en sant&#xE9; est &#xE9;lev&#xE9;.</li>
+                        <li>Nu&#xE9;e : Le vampire se change en une nu&#xE9;e de chauves-souris, lui permettant de voler et de se d&#xE9;placer plus rapidement.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Human_Mage_Staff_Masked.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Human_Mage_Staff_Masked.png" class="img_perso" alt/> <br>
                     Sorcier
                 </td>
-                <td>Force : 4<br>Dextérité : 2<br>Constitution : 10<br>Intelligence : 10<br>Sagesse : 10<br>Charisme : 4</td>
-                <td>Comp</td>
+                <td>Force : 4<br>Dext&#xE9;rit&#xE9; : 2<br>Constitution : 10<br>Intelligence : 10<br>Sagesse : 10<br>Charisme : 4</td>
+                <td>
+                    <ul>
+                        <li>Absorption : Draine la vie d'une cible.</li>
+                        <li>Mal&#xE9;diction : Invoque un esprit pour hanter une cible, le blessant et lui faisant perdre ses moyens.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Human_Warrior_Staff_Masked.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Human_Warrior_Staff_Masked.png" class="img_perso" alt/> <br>
                     Mage Guerrier
                 </td>
-                <td>Force : 8<br>Dextérité : 4<br>Constitution : 8<br>Intelligence : 8<br>Sagesse : 8<br>Charisme : 4</td>
-                <td>Comp</td>
+                <td>Force : 8<br>Dext&#xE9;rit&#xE9; : 4<br>Constitution : 8<br>Intelligence : 8<br>Sagesse : 8<br>Charisme : 4</td>
+                <td>
+                    <ul>
+                        <li>Balle Ombre : Le personnage cr&#xE9;e une boule de poison et la lance sur la cible, ce qui inflige 2 points de dommages de poison pendant 5 tours.</li>
+                        <li>Tremble Terre : Le personnage ass&#xE8;ne un puissant coup sur le sol, infligeant 5 dommages &#xE0; tous les ennemis proches.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Human_Mage_Masked.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Human_Mage_Masked.png" class="img_perso" alt/> <br>
                     Dresseur
                 </td>
-                <td>Force : 10<br>Dextérité : 3<br>Constitution : 10<br>Intelligence : 4<br>Sagesse : 3<br>Charisme : 10</td>
-                <td>Comp</td>
+                <td>Force : 10<br>Dext&#xE9;rit&#xE9; : 3<br>Constitution : 10<br>Intelligence : 4<br>Sagesse : 3<br>Charisme : 10</td>
+                <td>
+                    <ul>
+                        <li>Invocation : Le personnage invoque un d&#xE9;mon dont les statistiques sont d&#xE9;termin&#xE9;es en lan&#xE7;ant un d&#xE9; pour chaque statistique.</li>
+                        <li>Explosion : Le personnage fait exploser un de ses d&#xE9;mons. Le d&#xE9;mon disparaitera en infligeant des dommages &#xE0; tous les ennemis, &#xE0; la hauteur de sa vie.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td rowspan="4">Elementaire</td>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Human_Warrior_Sword-Shield_Plate.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Human_Warrior_Sword-Shield_Plate.png" class="img_perso" alt/> <br>
                     Mage Guerrier
                 </td>
-                <td>Force : 8<br>Dextérité : 4<br>Constitution : 8<br>Intelligence : 8<br>Sagesse : 8<br>Charisme : 4</td>
-                <td>Comp</td>
+                <td>Force : 8<br>Dext&#xE9;rit&#xE9; : 4<br>Constitution : 8<br>Intelligence : 8<br>Sagesse : 8<br>Charisme : 4</td>
+                <td>
+                    <ul>
+                        <li>Lame de feu : Le personnage enflamme sa lame et inflige des dommages &#xE0; la hauteur de sa force.</li>
+                        <li>Lame d'air : Le personnage cr&#xE9;e un vent tranchant au tour de sa lame et inflige 3 points de dommage suppl&#xE9;mentaires.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Human_Witch_Book.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Human_Witch_Book.png" class="img_perso" alt/> <br>
                     Mage
                 </td>
-                <td>Force : 4<br>Dextérité : 3<br>Constitution : 4<br>Intelligence : 12<br>Sagesse : 11<br>Charisme : 6</td>
-                <td>Comp</td>
+                <td>Force : 4<br>Dext&#xE9;rit&#xE9; : 3<br>Constitution : 4<br>Intelligence : 12<br>Sagesse : 11<br>Charisme : 6</td>
+                <td>
+                    <ul>
+                        <li>Boule de feu : Le personnage tire une boule de feu sur la cible, lui ingligeant des dommages &#xE0; la hauteur de son intelligence.</li>
+                        <li>Eclair : LE personnage lance un &#xE9;clair sur la cible, lui infligeant des dommages &#xE0; la hauteur de sa sagesse.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Elf_Rogue_Crossbow-Spell.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Elf_Rogue_Crossbow-Spell.png" class="img_perso" alt/> <br>
                     Explorateur
                 </td>
-                <td>Force : 5<br>Dextérité : 5<br>Constitution : 6<br>Intelligence : 10<br>Sagesse : 10<br>Charisme : 4</td>
-                <td>Comp</td>
+                <td>Force : 5<br>Dext&#xE9;rit&#xE9; : 5<br>Constitution : 6<br>Intelligence : 10<br>Sagesse : 10<br>Charisme : 4</td>
+                <td>
+                    <ul>
+                        <li>Apprentissage : Le personnage apprend la derni&#xE8;re comp&#xE9;tence utilis&#xE9;e par un ennemi et l'obtient &#xE0; la place de cette comp&#xE9;tence.</li>
+                        <li>Mimique : Le personnage utilise une comp&#xE9;tence d'un de ses alli&#xE9;s.</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
                 <td class="nom_classe">
-                    <img src="images/Seb Mj/TP16Characters2/Elf_Monk_Fist-2.png" /> <br>
+                    <img src="images/Seb_Mj/TP16Characters2/Elf_Monk_Fist-2.png" class="img_perso" alt/> <br>
                     Moine
                 </td>
-                <td>Force : 8<br>Dextérité : 6<br>Constitution : 8<br>Intelligence : 8<br>Sagesse : 8<br>Charisme : 2</td>
-                <td>Comp</td>
+                <td>Force : 8<br>Dext&#xE9;rit&#xE9; : 6<br>Constitution : 8<br>Intelligence : 8<br>Sagesse : 8<br>Charisme : 2</td>
+                <td>
+                    <ul>
+                        <li>Coup puissant : Le personnage attaque l'ennemi avec ses poings et lui inflige des dommages &#xE0; la hauteur de la moyenne entre son Intelligence et sa Force.</li>
+                        <li>Soin l&#xE9;ger : Le personnage soigne la cible &#xE0; la hauteur de sa sagesse.</li>
+                    </ul>
+                </td>
             </tr>
         </table>
 
-        <br>
-        <p class="page_footer">
-            <img class="logo_footer" src="images/LogoGeneral.png" width=100>
-            <a href="Accueil.html">Retour à l'Accueil</a> <br>
+        <footer class="page_footer">
+            <img class="logo_footer" src="images/LogoGeneral.png" height=50 alt="LogoGeneral">
+            <a href="Accueil.html">Retour &#xE0; l'Accueil</a> <br>
             <a href="MJ.html">Partie MJ</a> <br>
-        </p>
+        </footer>
+
+        <form class = "form_lance_de">
+            <ol>
+                <li>Choisissez une classe</li>
+                <li>Cliquez sur le bouton pour g&#xE9;n&#xE9;rer 5 lancers de d&#xE9;s et obtenir vos points suppl&#xE9;mentaires</li>
+                <li>R&#xE9;partissez les r&#xE9;sultats obtenus en points de statistique (vous pouvez avoir maximum 16 points dans chaque statistique)</li>
+            </ol>
+
+            <img src="images/face1.png" class="de1" id="de1_1" alt="1">
+            <img src="images/face2.png" class="de1" id="de1_2" alt="2">
+            <img src="images/face3.png" class="de1" id="de1_3" alt="3">
+            <img src="images/face4.png" class="de1" id="de1_4" alt="4">
+            <img src="images/face5.png" class="de1" id="de1_5" alt="5">
+            <img src="images/face6.png" class="de1" id="de1_6" alt="6">
+
+            <img src="images/face1.png" class="de2" id="de2_1" alt="1">
+            <img src="images/face2.png" class="de2" id="de2_2" alt="2">
+            <img src="images/face3.png" class="de2" id="de2_3" alt="3">
+            <img src="images/face4.png" class="de2" id="de2_4" alt="4">
+            <img src="images/face5.png" class="de2" id="de2_5" alt="5">
+            <img src="images/face6.png" class="de2" id="de2_6" alt="6">
+
+            <img src="images/face1.png" class="de3" id="de3_1" alt="1">
+            <img src="images/face2.png" class="de3" id="de3_2" alt="2">
+            <img src="images/face3.png" class="de3" id="de3_3" alt="3">
+            <img src="images/face4.png" class="de3" id="de3_4" alt="4">
+            <img src="images/face5.png" class="de3" id="de3_5" alt="5">
+            <img src="images/face6.png" class="de3" id="de3_6" alt="6">
+
+            <img src="images/face1.png" class="de4" id="de4_1" alt="1">
+            <img src="images/face2.png" class="de4" id="de4_2" alt="2">
+            <img src="images/face3.png" class="de4" id="de4_3" alt="3">
+            <img src="images/face4.png" class="de4" id="de4_4" alt="4">
+            <img src="images/face5.png" class="de4" id="de4_5" alt="5">
+            <img src="images/face6.png" class="de4" id="de4_6" alt="6">
+
+            <img src="images/face1.png" class="de5" id="de5_1" alt="1">
+            <img src="images/face2.png" class="de5" id="de5_2" alt="2">
+            <img src="images/face3.png" class="de5" id="de5_3" alt="3">
+            <img src="images/face4.png" class="de5" id="de5_4" alt="4">
+            <img src="images/face5.png" class="de5" id="de5_5" alt="5">
+            <img src="images/face6.png" class="de5" id="de5_6" alt="6">
+
+            <table class="tableau_res">
+                <tr>
+                    <td id="aff_res">0</td>
+                </tr>
+            </table>
+
+            <button class = "button_lance_de" name="Lance" type="button" onclick=roll_dices()> Cliquez ici </button>
+        </form>
+
+        <script>
+            console.log();
+
+            var ancien1 = "de1_1";
+            var ancien2 = "de2_1";
+            var ancien3 = "de3_1";
+            var ancien4 = "de4_1";
+            var ancien5 = "de5_1";
+
+            function roll_dices(){
+
+                if(getComputedStyle(document.getElementById(ancien1)).display != "none"){
+                    document.getElementById(ancien1).style.display = "none";
+                }
+                if(getComputedStyle(document.getElementById(ancien2)).display != "none"){
+                    document.getElementById(ancien2).style.display = "none";
+                }
+                if(getComputedStyle(document.getElementById(ancien3)).display != "none"){
+                    document.getElementById(ancien3).style.display = "none";
+                }
+                if(getComputedStyle(document.getElementById(ancien4)).display != "none"){
+                    document.getElementById(ancien4).style.display = "none";
+                }
+                if(getComputedStyle(document.getElementById(ancien5)).display != "none"){
+                    document.getElementById(ancien5).style.display = "none";
+                }
+
+                resultat1 = Math.ceil(6*Math.random());
+                resultat2 = Math.ceil(6*Math.random());
+                resultat3 = Math.ceil(6*Math.random());
+                resultat4 = Math.ceil(6*Math.random());
+                resultat5 = Math.ceil(6*Math.random());
+
+                id1 = "de1_"+resultat1;
+                id2 = "de2_"+resultat2;
+                id3 = "de3_"+resultat3;
+                id4 = "de4_"+resultat4;
+                id5 = "de5_"+resultat5;
+
+                document.getElementById(id1).style.display = "block";
+                document.getElementById(id2).style.display = "block";
+                document.getElementById(id3).style.display = "block";
+                document.getElementById(id4).style.display = "block";
+                document.getElementById(id5).style.display = "block";
+
+                document.getElementById("aff_res").textContent = resultat1+resultat2+resultat3+resultat4+resultat5;
+
+                ancien1 = id1;
+                ancien2 = id2;
+                ancien3 = id3;
+                ancien4 = id4;
+                ancien5 = id5;
+
+            }
+
+        
+        </script>
+
     </body>
+
+    
+
 </html>

@@ -1,22 +1,41 @@
-.collapse
+.creation
 {
   border-collapse: collapse;
   text-align: center;
   display: inline-table;
-  margin: 1em;
   border: solid 4px;
-  border-color: blue;
-  background-color: rgb(163, 207, 75);
+  border-color: rgb(0, 0, 156);
+  background-color: rgba(163, 207, 75, 0.315);
   table-layout: auto;
-  width:98%;
   overflow: visible;
-  margin-bottom: 150px;
+  max-width: 50%;
+  margin-left: 5%;
 }
 
-table th, table td
+.creation th, .creation td
 {
   border: solid 3px;
-  border-color: blueviolet
+  border-color: blueviolet;
+}
+
+
+.tableau_mj
+{
+  position: relative;
+  left: 15%;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: center;
+  border: solid 4px;
+  border-color: rgb(0, 0, 156);
+  background-color: rgba(163, 207, 75, 0.315);
+  overflow: visible;
+}
+
+.tableau_mj th, .tableau_mj td
+{
+  border: solid 3px;
+  border-color: blueviolet;
 }
 
 .nom_classe
@@ -25,27 +44,31 @@ table th, table td
   font-weight: 1000;
 }
 
-.Accueil_background
+.Accueil_main
 {
-  background-image:url(images/taverne.jfif);
+  position: relative; 
+  text-align: center;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 150%;
+  background-image: url(images/Body_Accueil.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 1000px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 10%;
+  padding: 3%;
 }
 
-.Accueil_footer
+.accueil_footer
 {
+  background-color: rgb(255, 211, 122);
   position: fixed;
   bottom: 0;
   left:0;
   right:0;
-  background-color: rgb(255, 211, 122);
-  margin-left: auto;
-  margin-right: auto;
+  height: 70px;
   text-align: center;
-}
-
-.Accueil_main
-{
-  position: relative; 
-  background-color: brown;
 }
 
 .page_footer
@@ -55,7 +78,7 @@ table th, table td
   bottom: 0;
   left:0;
   right:0;
-  height: 100px;
+  height: 50px;
   text-align: center;
 }
 
@@ -74,17 +97,25 @@ input:valid {
   border: none;
 }
 
-header
+h1, h2
 {
   text-align:center;
+  background-image: url("images/Bandeau.png");
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+header{
+  text-align: center;
 }
 
 .logo_efrei
 {
   position: absolute;
-  left:110px;
-  width:150px;
-  bottom:30px;
+  left:60px;
+  width:75px;
+  bottom:10px;
 }
 
 .logo_footer
@@ -93,10 +124,134 @@ header
   left:0;
 }
 
-form
+.mj_form
 {
-  background-color: darkgreen;
+  background-color: rgba(153, 153, 153, 0.363);
   margin:30px;
   padding: 10px;
   text-align:center;
+  border: solid 3px black;
+}
+
+.form_lance_de
+{
+  position: fixed;
+  right:5%;
+  bottom:20%;
+  top:20%;
+  left:60%;
+
+  background-color: rgba(255, 0, 0, 0.63);
+
+  padding:10px;
+  color:white;
+
+  font-size: 2vmin;
+
+}
+
+.button_lance_de
+{
+  background-color: rgb(241, 213, 213);
+  border-color: blue;
+  color:black;
+  position: absolute;
+  bottom:10px;
+  left:35%;
+  width:30%;
+  transition: background-color 1s, border-color 1s, color 1s  ;
+}
+
+.button_lance_de:hover
+{
+  background-color: black;
+  border-color: white;
+  color: white;
+}
+
+.de1
+{
+  position: absolute;
+  left:15%;
+  width:10%;
+  top:45%;
+  display: none;
+}
+
+.de2
+{
+  position: absolute;
+  left:30%;
+  width:10%;
+  top:45%;
+  display: none;
+}
+
+.de3
+{
+  position: absolute;
+  left:45%;
+  width:10%;
+  top:45%;
+  display: none;
+}
+
+.de4
+{
+  position: absolute;
+  left:60%;
+  width:10%;
+  top:45%;
+  display: none;
+}
+
+.de5
+{
+  position: absolute;
+  left:75%;
+  width:10%;
+  top:45%;
+  display: none;
+}
+
+.tableau_res
+{
+  position: absolute;
+  left:40%;
+  width:20%;
+  top:60%;
+  background-color: blanchedalmond;
+  text-align: center;
+}
+
+.tableau_res td{
+  color:black;
+  border: solid 3px black;
+}
+
+.cartes_form{
+  text-align: center;
+}
+
+.cartes{
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  margin-top:5%;
+  margin-bottom:15%;
+  display: none;
+}
+
+.carte_dep{
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  margin-top:5%;
+  margin-bottom:15%;
+}
+
+.img_perso{
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
 }

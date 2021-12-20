@@ -1,33 +1,61 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
     <head>
+        <meta charset="utf-8"/>
         <title>Contact/A propos de nous</title>
         <link rel="stylesheet" href="Style.css">
         <style>
-            body{background-color:rgb(252, 253, 185)}
+            body{background-color:rgb(252, 253, 185);
+            margin-bottom: 150px;}
+            p{position:absolute;
+                text-align: center;
+                left:28%;
+                width:40%;
+                top:30%;
+                padding:1%;
+                background-color:orange}
+                
         </style>
     </head>
     
     <body>
         <header>
-            <h1>Contact/À Propos</h1>
+            <h1>Contact/&#xC0; Propos</h1>
         </header>
         <p>
-            Adresse mail de support : 
-        </p>
-        <p>
-            Ce projet a été réalisé dans le cadre d'un projet en binôme de programmation web de l'EFREI.<br>
-            
-        </p>
-        <p>
-            TOUVENIN Sébastien <br>
+            Adresse mail de support : <a id="email"></a><br>
+            <br>
+            Ce site a &#xE9;t&#xE9; r&#xE9;alis&#xE9; dans le cadre d'un projet en bin&#xF4;me de programmation web de l'EFREI.<br>
+            <br>
+            THOUVENIN S&#xE9;bastien <br>
             ZELL Virginie <br>
         </p>
-        <p class="page_footer">
-            <img class="logo_footer" src="images/LogoGeneral.png" width=100>
-            <img class="logo_efrei" src="images/Logo_EFREI.png" />
-            <a href="Accueil.html">Retour à l'Accueil</a> <br>
-        </p>
+        <footer class="page_footer">
+            <img class="logo_footer" src="images/LogoGeneral.png" width=50 alt="LogoGeneral">
+            <img class="logo_efrei" src="images/Logo_EFREI.png" alt="Logo_EFREI"/>
+            <a href="Accueil.html">Retour &#xE0; l'Accueil</a> <br>
+        </footer>
+    
+        <script>
+            const a=document.querySelector("#email");
+    
+            function getEmail()
+            {
+            fetch("https://jsonformatter.org/json-editor/82d04c", {mode: 'no-cors'})
+            .then(function(response) {return response.json();})
+            .then(function (data)
+                    {
+                        const objectURL= URL.createObjectURL(data);
+                        a.src=objectURL;
+                        console.log(objectURL.value);
+                    }
+                );
+            } 
+    
+            getEmail();
+    
+        </script>
+
     </body>
 </html>

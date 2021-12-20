@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
     <head>
+        <meta charset="utf-8"/>
         <title>Partie MJ</title>
         <link rel="stylesheet" href="Style.css">
-        <link rel="shortcut icon" href="/images/logoMJ.ico" type="image/x-icon">
+    
 
         <style>
-            body{background-color:rgb(252, 253, 185)}
+            body{background-image:url(images/Fond_MJ.jpg);
+            margin-bottom:150px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            }
         </style>
+
     </head>
     
     <body>
-        <header>
-            <h1>Gestion MJ</h1>
-        </header>
-
-        <h2>Création des personnages</h2>
-        <form>
+    
+        <h1>Gestion MJ</h1>
+        
+        <form name="personnage" class="mj_form">
+            <h2>Cr&#xE9;ation des personnages</h2>
             <div>
-                <input type="text" id="name" name="user_name" placeholder="Nom" required>
+                <input type="text" id="nomID" name="nom" placeholder="Nom" required>
             </div>
             <br>
             <div>
                 <label>
                     <span>Classe :</span>
                 </label>
-                <select id="class" name="user_class">
+                <select id="classePersoID" name="classePerso">
                     <option selected value="paladin">Paladin</option>
-                    <option value="pretre">Prêtre</option>
+                    <option value="pretre">Pr&#xEA;tre</option>
                     <option value="hsorcier">Sorcier humain</option>
                     <option value="chasseur">Chasseur</option>
                     <option value="brute">Brute</option>
                     <option value="mineur">Mineur</option>
                     <option value="artisan">Artisan</option>
-                    <option value="golem">Façonneur de Golem</option>
+                    <option value="golem">Fa&#xE7;onneur de Golem</option>
                     <option value="savant">Savant</option>
                     <option value="archer">Archer</option>
                     <option value="elfeMage">Mage elfe</option>
@@ -43,53 +49,174 @@
                     <option value="chanteur">Chanteur</option>
                     <option value="guerrier">Guerrier</option>
                     <option value="vampire">Vampire</option>
-                    <option value="dsorcier">Sorcier démoniste</option>
-                    <option value="dmageGuerrier">Mage Guerrier démoniste</option>
+                    <option value="dsorcier">Sorcier d&#xE9;moniste</option>
+                    <option value="dmageGuerrier">Mage Guerrier d&#xE9;moniste</option>
                     <option value="dresseur">Dresseur</option>
-                    <option value="emageGuerrier">Mage Guerrier élémentaire</option>
-                    <option value="elementaireMage">Mage élémentaire</option>
+                    <option value="emageGuerrier">Mage Guerrier &#xE9;l&#xE9;mentaire</option>
+                    <option value="elementaireMage">Mage &#xE9;l&#xE9;mentaire</option>
                     <option value="explorateur">Explorateur</option>
                     <option value="moine">Moine</option>
                 </select>
             </div>
             <br>
             <div>
-                <input type="number" id="force" name="user_force" placeholder="Force" min="0" max="16" required>
-                <input type="number" id="dexterite" name="user_dexterite" placeholder="Dextérité" min="0" max="16" required>
-                <input type="number" id="constitution" name="user_constitution" placeholder="Constitution" min="0" max="16" required>
-                <input type="number" id="intelligence" name="user_intelligence" placeholder="Intelligence" min="0" max="16" required>
-                <input type="number" id="sagesse" name="user_sagesse" placeholder="Sagesse" min="0" max="16" required>
-                <input type="number" id="charisme" name="user_charisme" placeholder="Charisme" min="0" max="16" required>
+                <input type="number" id="forceID" name="force" placeholder="Force" min="0" max="16" required>
+                <input type="number" id="dexteriteID" name="dexterite" placeholder="Dext&#xE9;rit&#xE9;" min="0" max="16" required>
+                <input type="number" id="constitutionID" name="constitution" placeholder="Constitution" min="0" max="16" required>
+                <input type="number" id="intelligenceID" name="intelligence" placeholder="Intelligence" min="0" max="16" required>
+                <input type="number" id="sagesseID" name="sagesse" placeholder="Sagesse" min="0" max="16" required>
+                <input type="number" id="charismeID" name="charisme" placeholder="Charisme" min="0" max="16" required>
             </div>
             <br>
             <div>
-                <button type="submit">Ajouter</button>
+                <button type="button" onclick=ajouter()>Ajouter</button>
                 <button type="reset">Annuler</button>
             </div>
         </form>
-
+        
         <h2>Tableau des Personnages</h2>
-        <table class="collapse">
+        <table class="tableau_mj">
             <tr>
                 <th>Nom</th>
                 <th>Classe</th>
                 <th>Statistiques</th>
-                <th>Équipement</th>
+                <th>&#xE9;quipement</th>
             </tr>
         </table>
 
+
         <h2>Cartes</h2>
-        <form>
-            <select id="carte" name="carte">
-                <option selected value="carte1">Carte 1</option>
-                <option value="carte2">Carte 2</option>
+        <form class="cartes_form">
+
+            <select id="carte" name="carte" onchange=affiche_carte(this.selectedIndex)>
+                <option selected value="depart">D&#xE9;part</option>
+                <option value="foret1">For&#xEA;t 1</option>
+                <option value="foret2">For&#xEA;t 2</option>
+                <option value="lac">Lac</option>
+                <option value="village_entree">Entr&#xE9;e du village</option>
+                <option value="aucune">Aucune</option>
             </select>
+
+            <img src="images/Depart.jpg" class="carte_dep" id="depart" alt="D&#xE9;part">
+            <img src="images/Foret1.jpg" class="cartes" id="foret1" alt="Premi&#xE8;re partie de la for&#xEA;t">
+            <img src="images/Foret2.jpg" class="cartes" id="foret2" alt="Deuxi&#xE8;me partie de la for&#xEA;t">
+            <img src="images/Lac.jpg" class="cartes" id="lac" alt="Lac">
+            <img src="images/Village.jpg" class="cartes" id="village_entree" alt="Entr&#xE9;e du village">
+
         </form>
-        <br>
-        <p class="page_footer">
-            <img class="logo_footer" src="images/LogoGeneral.png" width=100>
-            <a href="Accueil.html">Retour à l'Accueil</a> <br>
-            <a href="Creation.html">Outils de création de personnage</a> <br>
-        </p>
+
+
+        <footer class="page_footer">
+            <img class="logo_footer" src="images/LogoGeneral.png" height=50 alt="LogoGeneral">
+            <a href="Accueil.html">Retour &#xE0;  l'Accueil</a> <br>
+            <a href="Creation.html">Outils de cr&#xE9;ation de personnage</a> <br>
+        </footer>
+
+
+        <script>
+
+            console.log();
+            var ancient=0;
+    
+            function ajouter()
+            {
+                var CommandForm=document.forms.personnage;
+    
+                var pforce=CommandForm.elements.force.value;
+                var pdexterite=CommandForm.elements.dexterite.value;
+                var pconstitution=CommandForm.elements.constitution.value;
+                var pintelligence=CommandForm.elements.intelligence.value;
+                var psagesse=CommandForm.elements.sagesse.value;
+                var pcharisme=CommandForm.elements.charisme.value;
+    
+                if ((0<=pforce&&pforce<=16) && (0<=pdexterite&&pdexterite<=16) && (0<=pconstitution&&pconstitution<=16) && (0<=pintelligence&&pintelligence<=16) && (0<=psagesse&&psagesse<=16) && (0<=pcharisme&&pcharisme<=16))
+                {
+                    var table=document.querySelector('table');
+                    var ligne=table.insertRow(-1);
+    
+                    var cellNom=ligne.insertCell(0);
+                    cellNom.innerHTML=CommandForm.elements.nom.value;
+    
+                    var cellClasse=ligne.insertCell(1);
+                    var textCell=CommandForm.elements.classePerso.options[CommandForm.elements.classePerso.selectedIndex].text;
+                    cellClasse.innerHTML=textCell;
+    
+                    var cellStat=ligne.insertCell(2);
+                    cellStat.innerHTML="";
+                    
+                    cellStat.innerHTML=cellStat.innerHTML.concat("FOR : ",pforce,"\nDEXT : ",pdexterite,"\nCONST : ",pconstitution,"\nINT : ",pintelligence,"\nSAG : ",psagesse,"\nCHAR : ",pcharisme);
+    
+                    var cellEquip=ligne.insertCell(3);
+                    cellEquip.innerHTML="Tenue en cuir";
+                }
+                else
+                {
+                    alert("Une des statistiques n'est pas comprise dans l'intervalle valide.");
+                }
+            }
+    
+            
+            function affiche_carte(id){
+    
+                console.log(ancient);
+    
+                switch(ancient){
+                    case 0: {
+                        document.getElementById("depart").style.display = "none";
+                        break;
+                    }
+                    case 1: {
+                        document.getElementById("foret1").style.display = "none";
+                        break;
+                    }
+                    case 2: {
+                        document.getElementById("foret2").style.display = "none";
+                        break;
+                    }
+                    case 3: {
+                        document.getElementById("lac").style.display = "none";
+                        break;
+                    }
+                    case 4: {
+                        document.getElementById("village_entree").style.display = "none";
+                        break;
+                    }
+    
+                    default :
+                }
+    
+                console.log(id);
+                switch(id){
+                    case 0: {
+                        document.getElementById("depart").style.display = "block";
+                        break;
+                    }
+                    case 1: {
+                        document.getElementById("foret1").style.display = "block";
+                        break;
+                    }
+                    case 2: {
+                        document.getElementById("foret2").style.display = "block";
+                        break;
+                    }
+                    case 3: {
+                        document.getElementById("lac").style.display = "block";
+                        break;
+                    }
+                    case 4: {
+                        document.getElementById("village_entree").style.display = "block";
+                        break;
+                    }
+    
+                    default :
+                }
+                
+                ancient = id;
+            }
+    
+        </script>
+
+
     </body>
+
 </html>
